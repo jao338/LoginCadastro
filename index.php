@@ -9,6 +9,13 @@
 </head>
 <body>
     
+
+    <?php 
+        include './config.php';
+
+        $c = new config();
+    ?>
+
     <main class="login">
 
         <div class="left-login">
