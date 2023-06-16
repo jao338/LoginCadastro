@@ -63,11 +63,19 @@ body * {
     font-size: 40pt;
 }
 
+.label-textfield{
+    color: #f0ffffde;
+    font-size: 16pt;
+    font-weight: 700;
+
+}
+
 .textfield{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    margin-top: 12px;
     margin-bottom: 32px;
 }
 
@@ -96,7 +104,7 @@ body * {
   content: "";
   display: inline-block;
   border-top: 1px solid white;
-  margin-top: 32px;
+  margin-top: 40px;
   width: 440px;
 }
 

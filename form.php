@@ -13,7 +13,7 @@
 
         <div class="left-login">
 
-            <img src="img/login.svg" class="left-img-login" alt="">
+            <img src="img/form.svg" class="left-img-login" alt="">
 
         </div>
 
@@ -21,24 +21,24 @@
 
             <div class="card-login">
 
-                <h1>Login</h1>
+            <h1>Cadastre-se</h1>
 
-                <div class="textfield">
+               <form action="">
+
+               <label for="usuario" class="label-textfield">Usuário</label>
+               <div class="textfield">
                     <input type="text" name="usuario" placeholder="Usuário" required>
                 </div>
-                
-                <div class="textfield">
-                    <input type="password" name="senha" placeholder="Senha" required>
+
+                <label for="senha" class="label-textfield">Senha</label>
+               <div class="textfield">
+                    <input type="text" name="senha" placeholder="Senha" required>
+                    <span class="linha"></span>
                 </div>
 
+                <input type="submit" name="btn-cadastrar" class="btn-login" value="CADASTRAR">
                 
-                <input type="submit" name="btn-login" class="btn-login" value="ENTRAR">
-
-                <span class="linha"></span>
-
-                <p id="info-cadastro">Não tem cadastro?</p>
-
-                <input type="submit" name="btn-cadastro" class="btn-cadastro" value="CADASTRAR">
+               </form>
 
             </div>
 
