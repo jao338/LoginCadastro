@@ -11,9 +11,9 @@
     
 
     <?php 
-        include './config.php';
+        include './user.php';
 
-        $c = new config();
+        $c = new user();
     ?>
 
     <main class="login">

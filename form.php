@@ -1,3 +1,11 @@
+<?php
+
+    if (isset($_POST['submit'])) {
+        print_r($_POST['usuario']);
+        print_r($_POST['senha']);
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,7 +31,7 @@
 
             <h1>Cadastre-se</h1>
 
-               <form action="">
+               <form action="perfil.php" method="POST">
 
                <label for="usuario" class="label-textfield">Usuário</label>
                <div class="textfield">
@@ -32,12 +40,12 @@
 
                 <label for="senha" class="label-textfield">Senha</label>
                <div class="textfield">
-                    <input type="text" name="senha" placeholder="Senha" required>
+                    <input type="password" name="senha" placeholder="Senha" required>
                     <span class="linha"></span>
                 </div>
 
                 <input type="submit" name="btn-cadastrar" class="btn-login" value="CADASTRAR">
-                
+
                </form>
 
             </div>
