@@ -42,35 +42,35 @@
 
 <?php
 
+    $dados = $obj->select_user($user, $senha);
+    $login = "";
+    $pass = "";
+    
     if($user != null){
 
         if (validate($user, $senha)) {
 
-            $dados = $obj->select_user($user, $senha);
-
-            $x1 = "";
-            $x2 = "";
-
             for ($i=0; $i < strlen($dados); $i++) {
 
-                $x1 .= $dados[$i];  
+                $login .= $dados[$i];  
 
                 if($dados[$i] == ";"){
 
-                    $x1 = rtrim($x1, ";"); 
+                    $login = rtrim($login, ";"); 
                     break;
                 }
             }
 
             for ($i=0; $i < strlen($dados); $i++) {
 
-                $x2 .= $dados[$i];  
+                $pass .= $dados[$i];  
 
             }
 
-            $x2 = ltrim($x2, "$user;"); 
+            $pass = ltrim($pass, "$user;"); 
 
-            echo $x2;
+            echo "<p>Usuário - $login</p>";
+            echo "<p>Senha - $pass</p>";
 
         }else{
             echo "Usuário não encontrado";

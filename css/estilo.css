@@ -20,6 +20,13 @@ body * {
     align-items: center;
 }
 
+.perfil{
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid white;
+    padding: 25px;
+}
+
 .perfil > h1{
     color: #77ffc0;
     font-size: 40pt;
