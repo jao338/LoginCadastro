@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     
@@ -32,20 +33,53 @@
     }
 
 ?>
-    <h1>Informações</h1>
+
+    <main class="login">
+
+    <div class="perfil">
+
+        <h1>Meu perfil</h1>
 
 <?php
-    
+
     if($user != null){
 
         if (validate($user, $senha)) {
-            echo "Usuário encontrado";
+
+            $dados = $obj->select_user($user, $senha);
+
+            $x1 = "";
+            $x2 = "";
+
+            for ($i=0; $i < strlen($dados); $i++) {
+
+                $x1 .= $dados[$i];  
+
+                if($dados[$i] == ";"){
+
+                    $x1 = rtrim($x1, ";"); 
+                    break;
+                }
+            }
+
+            for ($i=0; $i < strlen($dados); $i++) {
+
+                $x2 .= $dados[$i];  
+
+            }
+
+            $x2 = ltrim($x2, "$user;"); 
+
+            echo $x2;
+
         }else{
             echo "Usuário não encontrado";
         }
 
     }
 
-    ?>
+?>
+        </div>
+    </main>
 </body>
 </html>

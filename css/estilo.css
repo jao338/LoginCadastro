@@ -20,6 +20,11 @@ body * {
     align-items: center;
 }
 
+.perfil > h1{
+    color: #77ffc0;
+    font-size: 40pt;
+}
+
 .left-login{
     width: 50vw;
     height: 100vh;

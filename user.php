@@ -32,7 +32,7 @@
 
         while ($vetor = mysqli_fetch_array($res)) {
            
-        $retorno .= ($vetor["ID"] . $vetor["Login"] . $vetor["Senha"]);
+        $retorno .= ($vetor["Login"] . ";" . $vetor["Senha"]);
 
         }
         
