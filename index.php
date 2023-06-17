@@ -9,13 +9,6 @@
 </head>
 <body>
     
-
-    <?php 
-        include './user.php';
-
-        $c = new user();
-    ?>
-
     <main class="login">
 
         <div class="left-login">
@@ -28,25 +21,25 @@
 
             <div class="card-login">
 
-                <h1>Login</h1>
+                <h1>Fazer login</h1>
 
-                <div class="textfield">
-                    <input type="text" name="usuario" placeholder="Usuário" required>
-                </div>
-                
-                <div class="textfield">
-                    <input type="password" name="senha" placeholder="Senha" required>
-                </div>
+                <form action="perfil.php" method="POST" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                    <div class="textfield">
+                        <input type="text" name="usuario" placeholder="Usuário" required>
+                    </div>
+                    
+                    <div class="textfield">
+                        <input type="password" name="senha" placeholder="Senha" required>
+                    </div>
+                    
+                    <input type="submit" name="btn-login" class="btn-login" value="ENTRAR">
 
-                
-                <input type="submit" name="btn-login" class="btn-login" value="ENTRAR">
+                    <span class="linha"></span>
 
-                <span class="linha"></span>
+                    <p id="info-cadastro">Não tem cadastro?</p>
 
-                <p id="info-cadastro">Não tem cadastro?</p>
-
-                <input type="submit" name="btn-cadastro" class="btn-cadastro" value="CADASTRAR">
-
+                    <input type="submit" name="btn-cadastro" class="btn-cadastro" value="CADASTRAR">
+                </form>
             </div>
 
         </div>
