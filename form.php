@@ -4,10 +4,14 @@
 
     if(isset($_POST['btn-cadastrar'])){
 
-        $user = $_POST['usuario'];
-        $senha = $_POST['senha'];
+    $user = $_POST['usuario'];
+    $senha = $_POST['senha'];
 
+    if($obj->validate($user, $senha)) {
+        
+    }else{
         $obj->insert_user($user, $senha);
+    }
     } 
     
 ?>
