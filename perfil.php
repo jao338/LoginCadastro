@@ -35,11 +35,7 @@
 ?>
 
     <main class="login">
-
-    <div class="perfil">
-
-        <h1>Meu perfil</h1>
-
+  
 <?php
 
     $dados = $obj->select_user($user, $senha);
@@ -50,6 +46,9 @@
 
         if (validate($user, $senha)) {
 
+            echo "<form action='index.php' class='formulario'>";
+
+            echo "<h1>$user</h1>";
             for ($i=0; $i < strlen($dados); $i++) {
 
                 $login .= $dados[$i];  
@@ -69,17 +68,20 @@
 
             $pass = ltrim($pass, "$user;"); 
 
-            echo "<p>Usuário - $login</p>";
-            echo "<p>Senha - $pass</p>";
+            echo "<p><strong>Usuário</strong> - $login</p>";
+            echo "<p><strong>Senha</strong> - $pass</p>";
 
+            echo "<input type='submit' name='btn-voltar' class='btn-voltar' value='VOLTAR'>";
+           
+            echo "</form>";
         }else{
-            echo "Usuário não encontrado";
+            echo "Usuário ou Senha inválidos";
         }
 
     }
 
 ?>
-        </div>
+        
     </main>
 </body>
 </html>

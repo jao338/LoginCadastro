@@ -1,11 +1,17 @@
 <?php
+    include './user.php';
+    $obj = new user();
 
-    if (isset($_POST['submit'])) {
-        print_r($_POST['usuario']);
-        print_r($_POST['senha']);
-    }
+    if(isset($_POST['btn-cadastrar'])){
 
+        $user = $_POST['usuario'];
+        $senha = $_POST['senha'];
+
+        $obj->insert_user($user, $senha);
+    } 
+    
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,7 +37,7 @@
 
             <h1>Cadastre-se</h1>
 
-               <form action="perfil.php" method="POST">
+               <form action="form.php" method="POST">
 
                <label for="usuario" class="label-textfield">Usuário</label>
                <div class="textfield">
@@ -45,6 +51,11 @@
                 </div>
 
                 <input type="submit" name="btn-cadastrar" class="btn-login" value="CADASTRAR">
+
+               </form>
+               <form action="index.php" method="POST">
+
+                    <input type="submit" name="index" class="btn-cadastro" value="VOLTAR">
 
                </form>
 

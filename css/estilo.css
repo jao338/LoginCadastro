@@ -7,7 +7,6 @@
 }
 
 body * {
-
     box-sizing: border-box;
 }
 
@@ -20,16 +19,43 @@ body * {
     align-items: center;
 }
 
-.perfil{
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2f2841;
+    border-radius: 20px;
+    border: 2px solid white;
     width: 50vw;
     height: 50vh;
-    border: 1px solid white;
     padding: 25px;
 }
 
-.perfil > h1{
+.formulario > p{
+    color: white;
+    font-size: 16pt;
+    margin-bottom: 12px;
+}
+
+.formulario > h1{
     color: #77ffc0;
     font-size: 40pt;
+    margin-bottom: 30px;
+}
+
+.btn-voltar{
+    margin-top: 24px;
+    width: 440px;
+    height: 56px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
 }
 
 .left-login{

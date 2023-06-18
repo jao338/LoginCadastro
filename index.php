@@ -25,11 +25,11 @@
 
                 <form action="perfil.php" method="POST" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
                     <div class="textfield">
-                        <input type="text" name="usuario" placeholder="Usuário" required>
+                        <input type="text" name="usuario" placeholder="Usuário">
                     </div>
                     
                     <div class="textfield">
-                        <input type="password" name="senha" placeholder="Senha" required>
+                        <input type="password" name="senha" placeholder="Senha">
                     </div>
                     
                     <input type="submit" name="btn-login" class="btn-login" value="ENTRAR">
@@ -38,6 +38,8 @@
 
                     <p id="info-cadastro">Não tem cadastro?</p>
 
+                </form>
+                <form action="form.php" method="POST" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
                     <input type="submit" name="btn-cadastro" class="btn-cadastro" value="CADASTRAR">
                 </form>
             </div>

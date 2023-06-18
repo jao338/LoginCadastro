@@ -45,17 +45,12 @@
         $conexao = mysqli_connect("127.0.0.1:3307", "root", "");
         mysqli_select_db($conexao, "LoginCadastro");
 
-        $retorno = "";
+        $retorno = false;
 
         $res = mysqli_query($conexao, "INSERT INTO `user` (`ID`, `Login`, `Senha`) VALUES (NULL, '$user', '$senha')");
 
         if($res != null){
-
-            $retorno = "Inserido com sucesso";
-        }
-
-        else{
-            $retorno = "Algo deu errado";
+            $retorno = true;
         }
 
     return $retorno;
